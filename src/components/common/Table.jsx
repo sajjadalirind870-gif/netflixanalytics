@@ -1,0 +1,4 @@
+export default function Table({ columns = [], rows = [], empty = null, onRowClick, rowKey = 'id' }) {
+  if (!rows.length) return empty
+  return <div className="overflow-x-auto"><table className="w-full min-w-155 text-left"><thead><tr className="border-b border-[#2F2F2F]">{columns.map((column) => <th key={column.key} className={`px-4 py-3 text-[10px] font-bold uppercase tracking-wider text-gray-500 ${column.className || ''}`}>{column.label}</th>)}</tr></thead><tbody className="divide-y divide-[#2F2F2F]/70">{rows.map((row, index) => <tr key={row[rowKey] ?? index} onClick={onRowClick ? () => onRowClick(row) : undefined} className={`${onRowClick ? 'cursor-pointer hover:bg-[#232323]' : ''} transition-colors`}>{columns.map((column) => <td key={column.key} className={`px-4 py-3.5 text-sm text-gray-300 ${column.cellClassName || ''}`}>{column.render ? column.render(row[column.key], row) : row[column.key]}</td>)}</tr>)}</tbody></table></div>
+}

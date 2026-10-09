@@ -1,0 +1,2 @@
+import { CalendarDays } from 'lucide-react'
+export default function PageHeader({ title, description, action, eyebrow = 'PERFORMANCE OVERVIEW' }) { return <div className="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-end"><div><div className="mb-2 flex items-center gap-2 text-[10px] font-bold tracking-[0.18em] text-[#E50914]"><CalendarDays size={12} />{eyebrow}</div><h1 className="text-2xl font-bold tracking-tight text-white md:text-3xl">{title}</h1>{description && <p className="mt-1.5 text-sm text-gray-500">{description}</p>}</div>{action}</div> }

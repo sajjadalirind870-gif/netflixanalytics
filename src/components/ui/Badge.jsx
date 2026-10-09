@@ -1,0 +1,2 @@
+const styles = { success: 'bg-green-500/15 text-green-400', warning: 'bg-yellow-500/15 text-yellow-400', danger: 'bg-red-500/15 text-red-400', info: 'bg-blue-500/15 text-blue-400', default: 'bg-white/10 text-gray-300' }
+export default function Badge({ variant = 'default', children, className = '' }) { return <span className={`inline-flex items-center rounded-full px-2.5 py-1 text-xs font-semibold ${styles[variant] || styles.default} ${className}`}>{children}</span> }

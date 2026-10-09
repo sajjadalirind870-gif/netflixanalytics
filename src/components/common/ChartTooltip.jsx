@@ -1,0 +1,1 @@
+export const darkTooltipStyle = { contentStyle: { backgroundColor: '#181818', border: '1px solid #2F2F2F', borderRadius: '10px', color: '#fff' }, labelStyle: { color: '#fff' }, itemStyle: { color: '#E50914' } }

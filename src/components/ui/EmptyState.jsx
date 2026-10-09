@@ -1,0 +1,2 @@
+import { Inbox } from 'lucide-react'
+export default function EmptyState({ icon: Icon = Inbox, title = 'Nothing to show yet', description = 'Try adjusting your filters or search.' }) { return <div className="flex min-h-44 flex-col items-center justify-center px-6 py-10 text-center"><Icon size={28} className="mb-3 text-gray-600" /><h3 className="font-semibold text-white">{title}</h3><p className="mt-1 max-w-sm text-sm text-gray-500">{description}</p></div> }
